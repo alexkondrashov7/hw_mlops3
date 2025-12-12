@@ -19,7 +19,7 @@ jobs:
 
       - name: Log in to github container REGISTRY
         run: |
-          echo "${{ secrets.GITHUB_TOKEN }}" | docker login $REGISTRY -u ${{ github.actor }} --password-stdin
+          echo "${{ secrets.PERSONAL_GHCR_TOKEN}}" | docker login $REGISTRY -u ${{ github.actor }} --password-stdin
 
       - name: Build docker image
         run: |
