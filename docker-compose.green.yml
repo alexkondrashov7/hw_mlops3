@@ -1,0 +1,8 @@
+services:
+  mlservice_green:
+    build: .
+    environment:
+      - MODEL_PATH=model.pkl
+      - MODEL_VERSION=v.1.1.0
+    ports:
+      - "5071:5070"
